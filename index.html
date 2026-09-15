@@ -85,8 +85,8 @@
                 <div class="row">
                   <div class="col-sm pt-3">
                     <label for="inp-category" class="form-label">Categoría:</label>
-                    <select class="form-select" id="inp-category" name="category">
-                      <option value="" selected>Seleccione una categoría</option>
+                    <select class="form-select" id="inp-category" name="category" required>
+                      <option value="" selected disabled>Seleccione una categoría</option>
                       <option value="Entrada">Entrada</option>
                       <option value="Sopa">Sopa</option>
                       <option value="Plato principal">Plato principal</option>
@@ -101,14 +101,28 @@
                 <div class="row">
                   <div class="col-sm">
                     <label for="inp-desc" class="form-label">Descripcion:</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="inp-desc"
-                        name="desc"
-                        placeholder="Ingrese la descripcion"
-                        required
-                      />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inp-desc"
+                      name="desc"
+                      placeholder="Ingrese la descripcion"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                    <label for="inp-time" class="form-label">Tiempo de Preparacion:</label>
+                    <input
+                      type="number"
+                      min="0"
+                      class="form-control"
+                      id="inp-time"
+                      name="time"
+                      placeholder="Ingrese el tiempo de preparacion"
+                      required
+                    />
                   </div>
                 </div>
                 <div class="d-none" id="add-recipes-error">
@@ -134,7 +148,7 @@
           class="position-absolute top-50 start-50 translate-middle"
           id="empty-list"
         >
-          No ha ingresado ninguna receta :(
+          No ha ingresado ninguna receta :
         </h2>
         <div
           id="recipes"
